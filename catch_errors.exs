@@ -15,16 +15,7 @@ defmodule Example do
       IO.puts("Cleaning up...")
     end
   end
-end
 
-# Output: {:ok, 5}
-IO.inspect(Example.safe_dividend(10, 2))
-# Output: {:error, "Division by zero or arithmetic error"}
-IO.inspect(Example.safe_dividend(10, 0))
-# Output: {:error, "Pattern match error"}
-IO.inspect(Example.safe_dividend("hello", 0))
-
-defmodule Example do
   def safe_operation(data) do
     try do
       # Some operation with data
@@ -41,3 +32,10 @@ defmodule Example do
     end
   end
 end
+
+# Output: {:ok, 5}
+IO.inspect(Example.safe_dividend(10, 2))
+# Output: {:error, "Division by zero or arithmetic error"}
+IO.inspect(Example.safe_dividend(10, 0))
+# Output: {:error, "Pattern match error"}
+IO.inspect(Example.safe_dividend("hello", 0))
